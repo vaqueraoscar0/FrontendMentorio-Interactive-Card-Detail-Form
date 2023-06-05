@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/FrontendMentorio-Interactive-Card-Detail-Form/static/css/main.4056db8f.css",
+    "main.css": "/FrontendMentorio-Interactive-Card-Detail-Form/static/css/main.b18cb126.css",
     "main.js": "/FrontendMentorio-Interactive-Card-Detail-Form/static/js/main.0c631eec.js",
     "static/media/bg-main-desktop.png": "/FrontendMentorio-Interactive-Card-Detail-Form/static/media/bg-main-desktop.806e7aa7b4dbc1d78bc3.png",
     "static/media/bg-card-back.png": "/FrontendMentorio-Interactive-Card-Detail-Form/static/media/bg-card-back.23f68fa3aa3d5b33dfc8.png",
@@ -9,11 +9,11 @@
     "index.html": "/FrontendMentorio-Interactive-Card-Detail-Form/index.html",
     "static/media/icon-complete.svg": "/FrontendMentorio-Interactive-Card-Detail-Form/static/media/icon-complete.8fd757c0c5c44b1d597ca411400e046d.svg",
     "static/media/card-logo.svg": "/FrontendMentorio-Interactive-Card-Detail-Form/static/media/card-logo.8ca9036515954c3f8191559dce9c7bdf.svg",
-    "main.4056db8f.css.map": "/FrontendMentorio-Interactive-Card-Detail-Form/static/css/main.4056db8f.css.map",
+    "main.b18cb126.css.map": "/FrontendMentorio-Interactive-Card-Detail-Form/static/css/main.b18cb126.css.map",
     "main.0c631eec.js.map": "/FrontendMentorio-Interactive-Card-Detail-Form/static/js/main.0c631eec.js.map"
   },
   "entrypoints": [
-    "static/css/main.4056db8f.css",
+    "static/css/main.b18cb126.css",
     "static/js/main.0c631eec.js"
   ]
 }
