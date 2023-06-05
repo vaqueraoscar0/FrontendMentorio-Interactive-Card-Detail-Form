@@ -1,38 +1,643 @@
+html, #root, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(29,15,41);
+    font-family: "Space Grotesk", serif;
+    color: rgb(145, 145, 145);
+}
+
 .App {
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.illustration{
+    width: 33.5vw;
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width:74.5vw;
+    height: 100vh;
+
+    background-color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form .container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-right: 225px;
+    margin-top: 40px;
+    width: 380px;
 }
 
-.App-link {
-  color: #61dafb;
+.credit-cards{
+    position: absolute;
+    top: 185px;
+    left: 165px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.front-card-div{
+    position: relative;
+    text-align: center;
+}
+
+.front-card{
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 10px 7px 29px 0px;
+}
+
+.back-card{
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 10px 7px 29px 0px;
+
+}
+
+.card-holder-details{
+    width: 85%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    color: hsl(270, 3%, 87%);
+}
+
+.back-card-div{
+    position: relative;
+    text-align: center;
+
+}
+
+.card-holder-details-cvc{
+    width: 85%;
+    height: 80%;
+    position: absolute;
+    top: 65%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    color: hsl(270, 3%, 87%);
+}
+
+.credit-card-number{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 24px;
+    letter-spacing: 6px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.card-holder-details img{
+    margin-bottom: 10px;
+}
+
+.cardholder-info-card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .back-card{
+    position: relative;
+    left: 90px;
+    top: 40px;
+}
+
+input[type=text], select {
+    width: 100%;
+    height: 45px;
+    text-indent: 20px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 10px;
+}
+
+button[type=submit] {
+    width: 102%;
+    height: 55px;
+    background-color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    font-size: 18px;
+    color: hsl(300, 39%, 94%);
+}
+
+.card-num-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.exp-date{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.exp-date-item{
+    display: flex;
+    gap: 10px;
+}
+
+.exp-date-item input{
+    margin-top: 10px;
+    text-indent: 20px;
+    width: 80px;
+}
+
+
+
+.card-num-details .card-cvc input{
+    margin-top: 10px;
+    text-indent: 20px;
+    width: 100%;
+    height: 45px;
+}
+
+.error-message{
+    margin: 0;
+    padding: 0;
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+}
+
+.message-success{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 42%;
+    margin-left: 150px;
+    margin-top: 150px;
+}
+
+.message-success h1{
+    font-size: 36px;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 4px;
+}
+
+.message-success p{
+    font-size: 18px;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+
+@media only screen and (max-width: 1350px) {
+    .credit-cards{
+        top: 190px;
+        left: 80px;
+    }
+
+}
+
+@media only screen and (max-width: 1300px) {
+    .form .container{
+        margin-right: 160px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .App {
+        flex-direction: column;
+    }
+
+    .illustration{
+        height: 33.5vh;
+        width: 100%;
+    }
+
+    .illustration img{
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .form{
+        display: flex;
+        justify-content: center !important;
+        width: 100%;
+        height: 74.5vh;
+        background-color: white;
+    }
+
+    .form .container{
+        margin: 0;
+    }
+
+
+    .credit-cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 300px;
+        top: 20px;
+        left: 0;
+        text-align: center;
+    }
+
+    .credit-cards .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .credit-cards img{
+        width: 400px;
+    }
+
+    .front-card-div{
+        z-index: 1;
+    }
+
+    .front-card{
+        position: relative;
+        bottom: 55px;
+    }
+
+    .back-card{
+        z-index: 0;
+    }
+
+    .card-holder-details{
+        width: 80%;
+        top: 30%;
+    }
+
+    .credit-card-number{
+        font-size: 18px;
+        margin-top: 50px;
+    }
+
+    .card-holder-details img{
+        width: 20%;
+        margin-bottom: 0;
+    }
+
+    .card-holder-details-cvc{
+        top: 67%;
+        left: 68%;
+        font-size: 14px;
+
+    }
+
+    .message-success{
+        width: 40% !important;
+        margin-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+    .message-success{
+        width: 400px !important;
+    }
+}
+
+@media screen and (max-height: 835px) and (max-width: 1200px) {
+    .credit-cards .card{
+        margin-top: 0;
+    }
+
+    .card-holder-details{
+        height: 90%;
+        width: 80%;
+        top: 25%;
+    }
+
+    .credit-card-number{
+        font-size: 16px;
+        margin-top: 40px;
+        letter-spacing: 4px;
+    }
+
+    .card-holder-details img{
+        width: 20% !important;
+        margin-bottom: 10px;
+    }
+
+    .cardholder-info-card p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-height: 760px) and (max-width: 1200px) {
+    .credit-cards{
+        align-items: flex-end;
+    }
+
+    .credit-cards .card{
+        margin-top: 0;
+        align-items: flex-end;
+    }
+
+    .credit-cards img{
+        width: 320px;
+    }
+
+    .cardholder-info-card p{
+        font-size: 12px;
+    }
+
+    .card-holder-details img{
+        margin-bottom: 0;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .illustration{
+        height: 33.5vh;
+        width: 100%;
+    }
+
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 74.5vh;
+        background-color: white;
+    }
+
+    .form .container{
+        margin: 0;
+    }
+
+
+    .credit-cards{
+        height: 220px;
+        top: 40px;
+        left: 0;
+    }
+
+    .credit-cards .card{
+        position: relative;
+        right: 40px;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .credit-cards img{
+        width: 320px;
+    }
+
+    .front-card{
+        position: relative;
+        bottom: 30px;
+    }
+
+    .card-num-details{
+        gap: 10px;
+    }
+
+    .form .container{
+        width: 90%;
+    }
+
+    .exp-date-item{
+        gap: 0;
+    }
+
+    .exp-date-item input{
+        width: 50px;
+    }
+
+    .card-holder-details{
+        top: 38%;
+    }
+
+    .card-holder-details img{
+        margin-bottom: 0;
+    }
+
+    .card-holder-details{
+        height: 90%;
+        width: 80%;
+        top: 40%;
+    }
+
+    .credit-card-number{
+        font-size: 16px;
+        margin-top: 35px;
+        letter-spacing: 3px;
+    }
+
+    .card-holder-details img{
+        width: 20% !important;
+        margin-bottom: 10px;
+    }
+
+    .cardholder-info-card p{
+        font-size: 14px;
+    }
+
+    .card-holder-details-cvc{
+        top: 70%;
+        left: 73%;
+        font-size: 14px;
+
+    }
+}
+
+@media only screen and (max-height: 730px) {
+    .form{
+        height: 536px;
+    }
+
+    .illustration{
+        height: 241px;
+    }
+}
+
+
+@media screen and (max-height: 835px) and (max-width: 650px) {
+    .credit-cards{
+        top: 60px;
+    }
+
+    .credit-cards .card{
+        position: relative;
+        margin-top: 0;
+        right: 40px;
+    }
+}
+
+
+@media screen and (max-width: 420px){
+    .form .container{
+        font-size: 14px;
+    }
+
+    .credit-cards{
+        top: 80px;
+    }
+
+    .credit-cards .card{
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 60px;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .credit-cards img{
+        width: 300px;
+    }
+
+    .front-card{
+        bottom: 40px;
+        left: 30px;
+    }
+
+    .credit-cards .card{
+        margin-top: 0;
+    }
+
+    .card-holder-details{
+        width: 85%;
+        height: 90%;
+        position: absolute;
+        top: 30%;
+        left: 60%;
+    }
+
+    .card-holder-details-cvc{
+        top: 71%;
+        left: 75%;
+
+    }
+
+    .message-success{
+        width: 300px !important;
+    }
+
+    .message-success h1{
+        font-size: 30px;
+    }
+
+    .message-success p{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 360px){
+    .form .container{
+        font-size: 12px;
+    }
+
+    .credit-cards{
+        height: 320px;
+        width: 100vw;
+        top: 10px;
+        overflow: hidden;
+    }
+
+    .credit-cards img{
+        width: 245px;
+        height: 164px;
+    }
+
+    .card-num-details{
+        gap: 10px;
+    }
+
+    .form .container{
+        width: 90%;
+    }
+
+    .exp-date-item{
+        gap: 0;
+    }
+
+    .exp-date-item input{
+        width: 50px;
+    }
+
+    .card-holder-details{
+        width: 70%;
+        height: 65%;
+        position: absolute;
+        top: 20%;
+        left: 60%;
+    }
+
+    .credit-card-number{
+        letter-spacing: 3px;
+        font-size: 10px;
+        margin-top: 20px;
+    }
+
+    .cardholder-info-card p{
+        font-size: 8px;
+    }
+
+    .card-holder-details img{
+        width: 30% !important;
+        margin-bottom: 10px;
+    }
+
+    .card-holder-details-cvc{
+        top: 72%;
+        left: 80%;
+        font-size: 10px;
+
+    }
+
+}
+
+
+@media screen and (max-width: 300px){
+    .card-holder-details-cvc{
+        top: 82%;
+        left: 65%;
+
+    }
+
+    .message-success{
+        width: 240px !important;
+    }
+
+    .message-success h1{
+        font-size: 25px;
+    }
+
+    .message-success p{
+        font-size: 12px;
+    }
+
 }
